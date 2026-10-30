@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call for Talks - Student Geometry Seminar</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { theme: { fontFamily: { sans: ['Helvetica', 'sans-serif'], serif: ['Georgia', 'serif'] } } }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                        serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-900 font-serif antialiased leading-relaxed">
+<body class="bg-slate-50 text-slate-900 font-serif antialiased leading-relaxed flex flex-col min-h-screen">
 
     <!-- Top Navigation -->
     <nav class="bg-white border-b border-slate-300">
@@ -27,7 +37,7 @@
         </div>
     </nav>
 
-    <main class="max-w-3xl mx-auto px-6 py-12">
+    <main class="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
         
         <h1 class="text-3xl font-bold border-b-2 border-slate-900 pb-2 mb-6">Call for Student Talks</h1>
         
@@ -62,5 +72,9 @@
         </div>
 
     </main>
+
+    <footer class="border-t border-slate-300 mt-12 py-8 text-center text-sm font-sans text-slate-500 bg-slate-50">
+        &copy; 2026 [University/Department]. Typeset with KaTeX.
+    </footer>
 </body>
 </html>
