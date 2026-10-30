@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give a Talk - Student Geometry Seminar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Charter', 'serif'] } } }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="font-serif font-bold text-lg text-slate-900">Student Geometry Seminar</a>
+                <div class="hidden sm:flex space-x-6 text-sm font-medium text-slate-600">
+                    <a href="index.html" class="hover:text-amber-600 transition-colors">Home</a>
+                    <a href="archive.html" class="hover:text-amber-600 transition-colors">Past Talks</a>
+                    <a href="guidelines.html" class="text-amber-600">Give a Talk</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+        
+        <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-10 shadow-md">
+            <span class="text-amber-400 font-semibold text-xs tracking-wider uppercase">Open to All Students</span>
+            <h1 class="text-2xl sm:text-3xl font-serif font-bold mt-1 mb-4">Speaker Guidelines</h1>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                [Write a short introduction here explaining that original research is not required, and all levels of students are welcome to speak.]
+            </p>
+
+            <!-- Talk Formats Structure -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 text-xs sm:text-sm">
+                
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                    <div class="font-bold text-amber-300 mb-1">[Format Name, e.g. Expository]</div>
+                    <div class="text-slate-400">[Description of this type of talk.]</div>
+                </div>
+                
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                    <div class="font-bold text-amber-300 mb-1">[Format Name, e.g. Project]</div>
+                    <div class="text-slate-400">[Description of this type of talk.]</div>
+                </div>
+                
+                <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
+                    <div class="font-bold text-amber-300 mb-1">[Format Name, e.g. Work-in-Progress]</div>
+                    <div class="text-slate-400">[Description of this type of talk.]</div>
+                </div>
+
+            </div>
+
+            <!-- Call to action -->
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="mailto:[Your-Email@example.com]?subject=Seminar Talk Proposal" class="px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold text-sm transition">
+                    Propose a Talk via Email &rarr;
+                </a>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
