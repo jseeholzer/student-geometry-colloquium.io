@@ -3,56 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Talks - Student Geometry Seminar</title>
+    <title>Archive - Student Geometry Seminar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { theme: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Charter', 'serif'] } } }
+        tailwind.config = { theme: { fontFamily: { sans: ['Helvetica', 'sans-serif'], serif: ['Georgia', 'serif'] } } }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="bg-slate-50 text-slate-900 font-serif antialiased leading-relaxed">
 
     <!-- Top Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="index.html" class="font-serif font-bold text-lg text-slate-900">Student Geometry Seminar</a>
-                <div class="hidden sm:flex space-x-6 text-sm font-medium text-slate-600">
-                    <a href="index.html" class="hover:text-amber-600 transition-colors">Home</a>
-                    <a href="archive.html" class="text-amber-600">Past Talks</a>
-                    <a href="guidelines.html" class="hover:text-amber-600 transition-colors">Give a Talk</a>
+    <nav class="bg-white border-b border-slate-300">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="font-bold text-lg tracking-tight hover:text-red-800 transition-colors">
+                    [University/Department] Geometry Seminar
+                </a>
+                <div class="hidden sm:flex space-x-6 text-sm font-sans">
+                    <a href="index.html" class="text-slate-600 hover:text-red-800 transition-colors">Overview</a>
+                    <a href="archive.html" class="text-red-800 font-semibold border-b border-red-800 pb-0.5">Archive</a>
+                    <a href="guidelines.html" class="text-slate-600 hover:text-red-800 transition-colors">Call for Talks</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-        <div class="mb-8 border-b border-slate-200 pb-6">
-            <h1 class="text-3xl font-serif font-bold text-slate-900">Past Talks Archive</h1>
-            <p class="text-slate-500 mt-2">Slides and notes from previous seminars.</p>
-        </div>
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        
+        <h1 class="text-3xl font-bold border-b-2 border-slate-900 pb-2 mb-8">Past Talks Archive</h1>
 
-        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-            <div class="divide-y divide-slate-100">
+        <div class="bg-white border border-slate-300 rounded-sm">
+            <ul class="divide-y divide-slate-200">
                 
-                <!-- Archive Item Template (Copy and paste this block for each past talk) -->
-                <div class="p-4 sm:p-5 hover:bg-slate-50/70 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                    <div class="space-y-1">
-                        <div class="text-xs font-medium text-slate-400">[Date] &bull; [Speaker Name]</div>
-                        <h4 class="font-serif font-semibold text-slate-900 text-base">
-                            [Past Talk Title]
-                        </h4>
-                        <p class="text-xs text-slate-500">[Short 1-sentence description or subtitle of the talk.]</p>
+                <!-- Archive Item Template -->
+                <li class="p-5 sm:p-6 hover:bg-slate-50 transition-colors">
+                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                        <div class="space-y-1">
+                            <div class="font-sans text-xs text-slate-500 uppercase tracking-wider mb-2">
+                                [Date] &bull; [Speaker Name]
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                [Past Talk Title]
+                            </h3>
+                            <p class="text-sm text-slate-600 mt-1">[Short 1-sentence description or subtitle of the talk.]</p>
+                        </div>
+                        <div class="shrink-0 font-sans mt-2 sm:mt-0">
+                            <!-- Update href with actual link to your PDF file -->
+                            <a href="[Link-To-File.pdf]" class="text-sm text-red-800 border border-red-800 hover:bg-red-800 hover:text-white px-3 py-1.5 rounded-sm transition-colors">
+                                PDF Notes
+                            </a>
+                        </div>
                     </div>
-                    <div class="shrink-0">
-                        <!-- Update href with actual link to your PDF file -->
-                        <a href="[Link-To-File.pdf]" class="inline-flex items-center text-xs font-semibold text-amber-700 hover:text-amber-800 bg-amber-50 px-2.5 py-1.5 rounded border border-amber-200/50">
-                            Notes (PDF)
-                        </a>
-                    </div>
-                </div>
+                </li>
                 <!-- End of Archive Item Template -->
 
-            </div>
+            </ul>
         </div>
     </main>
 </body>
