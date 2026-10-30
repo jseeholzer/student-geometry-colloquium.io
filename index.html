@@ -5,321 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Geometry Seminar</title>
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: {
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        },
-                        amberAccent: {
-                            500: '#d97706',
-                            600: '#b45309',
-                        }
+                        amberAccent: { 500: '#d97706', 600: '#b45309' }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                        serif: ['Charter', 'Georgia', 'Cambria', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Charter', 'Georgia', 'serif'],
                     }
                 }
             }
         }
     </script>
 
-    <!-- KaTeX CSS & JS CDN with Auto-render Extension -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
-
-    <style>
-        /* Smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Mathematical display block styling tweak */
-        .katex-display {
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 0.5rem 0;
-        }
-    </style>
+    <!-- KaTeX for Math -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-100 selection:text-amber-900">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Top Navigation Bar -->
+    <!-- Top Navigation -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <a href="#" class="font-serif font-bold text-lg text-slate-900 tracking-tight flex items-center gap-2">
+                <a href="index.html" class="font-serif font-bold text-lg text-slate-900 flex items-center gap-2">
                     <span class="inline-block w-3 h-3 rounded-full bg-amber-600"></span>
                     Student Geometry Seminar
                 </a>
                 <div class="hidden sm:flex space-x-6 text-sm font-medium text-slate-600">
-                    <a href="#next-talk" class="hover:text-amber-600 transition-colors">Upcoming Talk</a>
-                    <a href="#give-a-talk" class="hover:text-amber-600 transition-colors">Give a Talk</a>
-                    <a href="#archive" class="hover:text-amber-600 transition-colors">Past Talks</a>
-                    <a href="#organizers" class="hover:text-amber-600 transition-colors">Contact</a>
+                    <a href="index.html" class="text-amber-600">Home</a>
+                    <a href="archive.html" class="hover:text-amber-600 transition-colors">Past Talks</a>
+                    <a href="guidelines.html" class="hover:text-amber-600 transition-colors">Give a Talk</a>
+                    <a href="#contact" class="hover:text-amber-600 transition-colors">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero / Header Section -->
+    <!-- Hero Section -->
     <header class="bg-gradient-to-b from-white to-slate-100/60 border-b border-slate-200 py-16 sm:py-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-100 text-amber-800 mb-4">
-                Department of Mathematics &bull; Student-Run
+                [Department Name] &bull; Student-Run
             </span>
             <h1 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
-                Geometry & Topology Student Seminar
+                [Your Seminar Title]
             </h1>
             <p class="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                A friendly, informal space for undergraduate, master's, and early PhD students to explore classical and modern geometry. We prioritize intuition, lively discussion, and welcoming peer talks over formal prestige.
+                [Write a brief 1-2 sentence description of your seminar's goal, target audience, and welcoming atmosphere.]
             </p>
-            <div class="mt-8 flex flex-wrap justify-center gap-3">
-                <a href="#next-talk" class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-medium text-sm transition shadow-sm">
-                    View Next Talk
-                </a>
-                <a href="#give-a-talk" class="px-5 py-2.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-medium text-sm transition shadow-sm">
-                    Propose a Topic
-                </a>
-            </div>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 space-y-16">
-
-        <!-- 1. Next Talk Spotlight Card -->
+        
+        <!-- Next Talk Template -->
         <section id="next-talk">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 flex items-center gap-2">
                     <span>Next Talk</span>
-                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-sans font-semibold">Live Soon</span>
                 </h2>
-                <span class="text-xs text-slate-500 font-mono">Series #14</span>
+                <span class="text-xs text-slate-500 font-mono">[Session Number]</span>
             </div>
 
             <div class="bg-white border border-slate-200 rounded-xl p-6 sm:p-8 shadow-sm">
                 <!-- Meta tags -->
                 <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-medium text-slate-500 mb-3">
-                    <span class="flex items-center gap-1.5">
-                        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        Thursday, November 12 &bull; 16:15 – 17:15
-                    </span>
-                    <span class="flex items-center gap-1.5">
-                        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                        Math Building, Room 204 &amp; Hybrid on Zoom
-                    </span>
+                    <span>📅 [Date] &bull; [Time]</span>
+                    <span>📍 [Location / Room / Zoom]</span>
                 </div>
 
-                <!-- Talk Title with Math -->
+                <!-- Talk Title -->
                 <h3 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mb-2 leading-snug">
-                    An Intuitive Introduction to Ricci Curvature and Bochner's Formula on Compact Manifolds $(\mathcal{M}, g)$
+                    [Talk Title Goes Here]
                 </h3>
 
-                <!-- Speaker Name & Degree -->
+                <!-- Speaker Name -->
                 <div class="text-sm text-slate-700 font-medium mb-5">
-                    Speaker: <span class="text-amber-800 font-semibold">Elena Rossi</span> 
-                    <span class="text-xs text-slate-500 font-normal ml-1">(2nd-year Master's Student)</span>
+                    Speaker: <span class="text-amber-800 font-semibold">[Speaker Name]</span> 
+                    <span class="text-xs text-slate-500 font-normal ml-1">([Academic Level/Position])</span>
                 </div>
 
-                <!-- Abstract with KaTeX inline and display formulas -->
+                <!-- Abstract -->
                 <div class="prose prose-slate max-w-none text-slate-700 text-sm sm:text-base leading-relaxed mb-6 font-serif">
-                    <p class="mb-3">
-                        Curvature in Riemannian geometry is often introduced through the Riemann curvature tensor $R(X, Y)Z$, which carries 20 independent components in dimension 4. In this talk, we focus on the Ricci tensor $\operatorname{Ric}(X, Y) = \operatorname{tr}(Z \mapsto R(Z, X)Y)$, an average measure of sectional curvature that directly controls volume growth.
-                    </p>
-                    <p class="mb-3">
-                        We will develop the classical Bochner-Weitzenb&ouml;ck identity for harmonic 1-forms $\omega \in \Omega^1(\mathcal{M})$:
-                    </p>
+                    <p>[Paragraph 1 of abstract...]</p>
                     <div class="my-3 text-center">
-                        $$\frac{1}{2}\Delta |\omega|^2 = |\nabla \omega|^2 + \operatorname{Ric}(\omega^\sharp, \omega^\sharp)$$
+                        $$ [Math Equation Placeholder] $$
                     </div>
-                    <p>
-                        As an application, we will deduce Bochner's vanishing theorem: if $\operatorname{Ric} > 0$ on a closed, oriented manifold $\mathcal{M}$, then its first Betti number vanishes, $b_1(\mathcal{M}) = 0$.
-                    </p>
+                    <p>[Paragraph 2 of abstract...]</p>
                 </div>
 
-                <!-- Prerequisite / Assumed Knowledge note -->
+                <!-- Prerequisites -->
                 <div class="bg-amber-50/70 border border-amber-200/60 rounded-lg p-3 text-xs sm:text-sm text-amber-900 flex items-start gap-2.5">
                     <span class="font-bold uppercase tracking-wider text-[11px] bg-amber-200 text-amber-900 px-1.5 py-0.5 rounded">Prerequisites</span>
-                    <span>Basic multi-variable calculus and definitions of smooth manifolds. No previous knowledge of Riemannian curvature tensors is required; all geometric notions will be introduced with sketches!</span>
+                    <span>[List any prior knowledge needed, e.g., Basic Calculus, Linear Algebra]</span>
                 </div>
             </div>
         </section>
 
-        <!-- 2. Call for Speakers Section -->
-        <section id="give-a-talk" class="bg-slate-900 text-white rounded-2xl p-6 sm:p-10 shadow-md">
-            <div class="max-w-2xl">
-                <span class="text-amber-400 font-semibold text-xs tracking-wider uppercase">Open to All Students</span>
-                <h2 class="text-2xl sm:text-3xl font-serif font-bold mt-1 mb-4">Want to Give a Talk?</h2>
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                    You don't need original research to present! We encourage student talks at every level. Great formats include:
-                </p>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 text-xs sm:text-sm">
-                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
-                        <div class="font-bold text-amber-300 mb-1">Expository Review</div>
-                        <div class="text-slate-400">Walk through a textbook theorem, a neat proof, or a survey paper you enjoyed.</div>
-                    </div>
-                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
-                        <div class="font-bold text-amber-300 mb-1">Thesis / Project Debrief</div>
-                        <div class="text-slate-400">Share what you worked on during a semester project or bachelor/master thesis.</div>
-                    </div>
-                    <div class="bg-slate-800/80 p-4 rounded-lg border border-slate-700">
-                        <div class="font-bold text-amber-300 mb-1">Work-in-Progress</div>
-                        <div class="text-slate-400">Present an open question or a computation where you'd like feedback from fellow students.</div>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-4">
-                    <!-- Replace the href with your Google Form or mailto: link -->
-                    <a href="mailto:seminar-organizers@example.edu?subject=Seminar%20Talk%20Proposal" class="px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold text-sm transition">
-                        Propose a Talk via Email &rarr;
-                    </a>
-                    <span class="text-xs text-slate-400">Or speak directly to an organizer after any session.</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Past Talks Archive -->
-        <section id="archive">
-            <div class="mb-6">
-                <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900">Past Talks Archive</h2>
-                <p class="text-xs sm:text-sm text-slate-500">Slides and notes from previous seminars.</p>
-            </div>
-
-            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                <div class="divide-y divide-slate-100">
-                    
-                    <!-- Past Talk Row 1 -->
-                    <div class="p-4 sm:p-5 hover:bg-slate-50/70 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                        <div class="space-y-1">
-                            <div class="text-xs font-medium text-slate-400">Oct 28, 2026 &bull; Julian Weber (PhD)</div>
-                            <h4 class="font-serif font-semibold text-slate-900 text-base">
-                                The Gauss-Bonnet Theorem: From Triangulations to Euler Characteristics $\chi(\Sigma)$
-                            </h4>
-                            <p class="text-xs text-slate-500">An explicit combinatorial introduction connecting geodesic curvature to global topology.</p>
-                        </div>
-                        <div class="shrink-0">
-                            <a href="#" class="inline-flex items-center text-xs font-semibold text-amber-700 hover:text-amber-800 bg-amber-50 px-2.5 py-1.5 rounded border border-amber-200/50">
-                                Notes (PDF)
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Past Talk Row 2 -->
-                    <div class="p-4 sm:p-5 hover:bg-slate-50/70 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                        <div class="space-y-1">
-                            <div class="text-xs font-medium text-slate-400">Oct 14, 2026 &bull; Sophia Lin (BSc)</div>
-                            <h4 class="font-serif font-semibold text-slate-900 text-base">
-                                Visualizing the Hopf Fibration $S^3 \to S^2$ via Stereographic Projection
-                            </h4>
-                            <p class="text-xs text-slate-500">Interactive demonstrations of linked fibers in 3-space using projection maps.</p>
-                        </div>
-                        <div class="shrink-0">
-                            <a href="#" class="inline-flex items-center text-xs font-semibold text-amber-700 hover:text-amber-800 bg-amber-50 px-2.5 py-1.5 rounded border border-amber-200/50">
-                                Slides
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Past Talk Row 3 -->
-                    <div class="p-4 sm:p-5 hover:bg-slate-50/70 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                        <div class="space-y-1">
-                            <div class="text-xs font-medium text-slate-400">Sep 30, 2026 &bull; Matteo Bianchi (PhD)</div>
-                            <h4 class="font-serif font-semibold text-slate-900 text-base">
-                                What is a Symplectic Manifold $(M, \omega)$ and Why Do Physicists Care?
-                            </h4>
-                            <p class="text-xs text-slate-500">Darboux's Theorem and the geometric formulation of classical Hamiltonian dynamics.</p>
-                        </div>
-                        <div class="shrink-0">
-                            <a href="#" class="inline-flex items-center text-xs font-semibold text-amber-700 hover:text-amber-800 bg-amber-50 px-2.5 py-1.5 rounded border border-amber-200/50">
-                                Notes (PDF)
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Organizers & Mailing List -->
-        <section id="organizers" class="border-t border-slate-200 pt-12">
+        <!-- Organizers / Contact -->
+        <section id="contact" class="border-t border-slate-200 pt-12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Organizers -->
                 <div>
                     <h3 class="text-lg font-serif font-bold text-slate-900 mb-3">Organizers</h3>
-                    <p class="text-xs text-slate-500 mb-4">Feel free to reach out to any of us with questions or suggestions:</p>
                     <ul class="space-y-2 text-sm text-slate-700">
+                        <!-- Organizer Template -->
                         <li class="flex items-center justify-between pr-4">
-                            <span><strong>Alex Chen</strong> (PhD Student)</span>
-                            <a href="mailto:alex.chen@example.edu" class="text-amber-700 text-xs hover:underline">alex.chen@...</a>
+                            <span><strong>[Organizer 1 Name]</strong></span>
+                            <a href="mailto:email@example.edu" class="text-amber-700 text-xs hover:underline">[email@example.edu]</a>
                         </li>
                         <li class="flex items-center justify-between pr-4">
-                            <span><strong>Marie Dupont</strong> (MSc Student)</span>
-                            <a href="mailto:marie.dupont@example.edu" class="text-amber-700 text-xs hover:underline">marie.dupont@...</a>
+                            <span><strong>[Organizer 2 Name]</strong></span>
+                            <a href="mailto:email@example.edu" class="text-amber-700 text-xs hover:underline">[email@example.edu]</a>
                         </li>
                     </ul>
                 </div>
-
-                <!-- Mailing list / Calendar -->
+                
+                <!-- Mailing list placeholder -->
                 <div class="bg-white border border-slate-200 rounded-xl p-5">
                     <h3 class="text-base font-serif font-bold text-slate-900 mb-1">Stay Updated</h3>
-                    <p class="text-xs text-slate-600 mb-4">Receive reminders 48 hours before each talk, including Zoom links and reading materials.</p>
-                    
-                    <form onsubmit="handleSubscribe(event)" class="space-y-2">
-                        <div class="flex gap-2">
-                            <input type="email" id="subscriber-email" required placeholder="student@university.edu" class="flex-1 px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-amber-500">
-                            <button type="submit" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold transition">
-                                Join List
-                            </button>
-                        </div>
-                        <p id="subscribe-feedback" class="text-xs hidden text-emerald-700 mt-1 font-medium"></p>
+                    <p class="text-xs text-slate-600 mb-4">Receive reminders before each talk.</p>
+                    <form onsubmit="handleSubscribe(event)" class="flex gap-2">
+                        <input type="email" id="subscriber-email" required placeholder="student@university.edu" class="flex-1 px-3 py-2 text-xs border border-slate-300 rounded-lg">
+                        <button type="submit" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold">Join List</button>
                     </form>
+                    <p id="subscribe-feedback" class="text-xs hidden text-emerald-700 mt-1"></p>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
-        <div class="max-w-4xl mx-auto px-4">
-            <p>Student Geometry Seminar &bull; Hosted with GitHub Pages &bull; Typeset with KaTeX</p>
-        </div>
-    </footer>
-
-    <!-- Script to initialize KaTeX Auto-Render Extension -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Check if renderMathInElement is loaded
             if (window.renderMathInElement) {
                 renderMathInElement(document.body, {
-                    delimiters: [
-                        {left: '$$', right: '$$', display: true},
-                        {left: '$', right: '$', display: false},
-                        {left: '\\(', right: '\\)', display: false},
-                        {left: '\\[', right: '\\]', display: true}
-                    ],
+                    delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false} ],
                     throwOnError: false
                 });
             }
         });
-
-        // Simple client-side subscription feedback handler
         function handleSubscribe(e) {
             e.preventDefault();
-            const emailInput = document.getElementById('subscriber-email');
-            const feedback = document.getElementById('subscribe-feedback');
-            if (emailInput.value) {
-                feedback.textContent = "Thank you! You've been subscribed to talk reminders.";
-                feedback.classList.remove('hidden');
-                emailInput.value = '';
-            }
+            document.getElementById('subscribe-feedback').textContent = "Subscribed!";
+            document.getElementById('subscribe-feedback').classList.remove('hidden');
         }
     </script>
 </body>
