@@ -10,12 +10,9 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        amberAccent: { 500: '#d97706', 600: '#b45309' }
-                    },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        serif: ['Charter', 'Georgia', 'serif'],
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                        serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
                     }
                 }
             }
@@ -27,118 +24,112 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="bg-slate-50 text-slate-900 font-serif antialiased leading-relaxed">
 
     <!-- Top Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="index.html" class="font-serif font-bold text-lg text-slate-900 flex items-center gap-2">
-                    <span class="inline-block w-3 h-3 rounded-full bg-amber-600"></span>
-                    Student Geometry Seminar
+    <nav class="bg-white border-b border-slate-300">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="font-bold text-lg tracking-tight hover:text-red-800 transition-colors">
+                    [University/Department] Geometry Seminar
                 </a>
-                <div class="hidden sm:flex space-x-6 text-sm font-medium text-slate-600">
-                    <a href="index.html" class="text-amber-600">Home</a>
-                    <a href="archive.html" class="hover:text-amber-600 transition-colors">Past Talks</a>
-                    <a href="guidelines.html" class="hover:text-amber-600 transition-colors">Give a Talk</a>
-                    <a href="#contact" class="hover:text-amber-600 transition-colors">Contact</a>
+                <div class="hidden sm:flex space-x-6 text-sm font-sans">
+                    <a href="index.html" class="text-red-800 font-semibold border-b border-red-800 pb-0.5">Overview</a>
+                    <a href="archive.html" class="text-slate-600 hover:text-red-800 transition-colors">Archive</a>
+                    <a href="guidelines.html" class="text-slate-600 hover:text-red-800 transition-colors">Call for Talks</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="bg-gradient-to-b from-white to-slate-100/60 border-b border-slate-200 py-16 sm:py-24">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-100 text-amber-800 mb-4">
-                [Department Name] &bull; Student-Run
-            </span>
-            <h1 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
+    <!-- Hero / Title Section -->
+    <header class="bg-white border-b border-slate-200 py-12">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-sm font-sans text-slate-500 uppercase tracking-widest mb-3">Student Seminar Series</p>
+            <h1 class="text-4xl font-bold tracking-tight mb-4 text-slate-900">
                 [Your Seminar Title]
             </h1>
-            <p class="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-lg text-slate-700 max-w-2xl">
                 [Write a brief 1-2 sentence description of your seminar's goal, target audience, and welcoming atmosphere.]
             </p>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 space-y-16">
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-12">
         
-        <!-- Next Talk Template -->
+        <!-- Next Talk Section -->
         <section id="next-talk">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 flex items-center gap-2">
-                    <span>Next Talk</span>
-                </h2>
-                <span class="text-xs text-slate-500 font-mono">[Session Number]</span>
-            </div>
+            <h2 class="text-2xl font-bold border-b-2 border-slate-900 pb-2 mb-6">Upcoming Session</h2>
 
-            <div class="bg-white border border-slate-200 rounded-xl p-6 sm:p-8 shadow-sm">
+            <div class="bg-white border border-slate-300 rounded-sm p-6 sm:p-8">
                 <!-- Meta tags -->
-                <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-medium text-slate-500 mb-3">
-                    <span>📅 [Date] &bull; [Time]</span>
-                    <span>📍 [Location / Room / Zoom]</span>
+                <div class="font-sans text-sm text-slate-600 mb-4 border-b border-slate-100 pb-4 flex flex-wrap gap-4">
+                    <span><strong>Date:</strong> [Date] &bull; [Time]</span>
+                    <span><strong>Location:</strong> [Room / Zoom Link]</span>
                 </div>
 
                 <!-- Talk Title -->
-                <h3 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mb-2 leading-snug">
+                <h3 class="text-xl font-bold mb-1">
                     [Talk Title Goes Here]
                 </h3>
 
                 <!-- Speaker Name -->
-                <div class="text-sm text-slate-700 font-medium mb-5">
-                    Speaker: <span class="text-amber-800 font-semibold">[Speaker Name]</span> 
-                    <span class="text-xs text-slate-500 font-normal ml-1">([Academic Level/Position])</span>
+                <div class="text-base text-slate-700 mb-6 italic">
+                    [Speaker Name], <span class="text-sm not-italic text-slate-500">[Academic Level/Position]</span>
                 </div>
 
                 <!-- Abstract -->
-                <div class="prose prose-slate max-w-none text-slate-700 text-sm sm:text-base leading-relaxed mb-6 font-serif">
+                <div class="prose prose-slate max-w-none text-slate-800 text-base leading-relaxed mb-6">
+                    <p class="font-sans text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Abstract</p>
                     <p>[Paragraph 1 of abstract...]</p>
-                    <div class="my-3 text-center">
+                    <div class="my-4 text-center">
                         $$ [Math Equation Placeholder] $$
                     </div>
                     <p>[Paragraph 2 of abstract...]</p>
                 </div>
 
                 <!-- Prerequisites -->
-                <div class="bg-amber-50/70 border border-amber-200/60 rounded-lg p-3 text-xs sm:text-sm text-amber-900 flex items-start gap-2.5">
-                    <span class="font-bold uppercase tracking-wider text-[11px] bg-amber-200 text-amber-900 px-1.5 py-0.5 rounded">Prerequisites</span>
-                    <span>[List any prior knowledge needed, e.g., Basic Calculus, Linear Algebra]</span>
+                <div class="bg-slate-50 border-l-4 border-red-800 p-4 mt-6 text-sm text-slate-700">
+                    <strong>Prerequisites:</strong> [List any prior knowledge needed, e.g., Basic Calculus, Linear Algebra]
                 </div>
             </div>
         </section>
 
         <!-- Organizers / Contact -->
-        <section id="contact" class="border-t border-slate-200 pt-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section id="contact" class="pt-8">
+            <h2 class="text-2xl font-bold border-b-2 border-slate-900 pb-2 mb-6">Organization</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
-                    <h3 class="text-lg font-serif font-bold text-slate-900 mb-3">Organizers</h3>
-                    <ul class="space-y-2 text-sm text-slate-700">
-                        <!-- Organizer Template -->
-                        <li class="flex items-center justify-between pr-4">
-                            <span><strong>[Organizer 1 Name]</strong></span>
-                            <a href="mailto:email@example.edu" class="text-amber-700 text-xs hover:underline">[email@example.edu]</a>
+                    <h3 class="font-bold text-lg mb-3">Committees</h3>
+                    <ul class="space-y-3 text-base text-slate-700">
+                        <li>
+                            <strong>[Organizer 1 Name]</strong><br>
+                            <a href="mailto:email@example.edu" class="font-sans text-sm text-red-800 hover:underline">[email@example.edu]</a>
                         </li>
-                        <li class="flex items-center justify-between pr-4">
-                            <span><strong>[Organizer 2 Name]</strong></span>
-                            <a href="mailto:email@example.edu" class="text-amber-700 text-xs hover:underline">[email@example.edu]</a>
+                        <li>
+                            <strong>[Organizer 2 Name]</strong><br>
+                            <a href="mailto:email@example.edu" class="font-sans text-sm text-red-800 hover:underline">[email@example.edu]</a>
                         </li>
                     </ul>
                 </div>
                 
-                <!-- Mailing list placeholder -->
-                <div class="bg-white border border-slate-200 rounded-xl p-5">
-                    <h3 class="text-base font-serif font-bold text-slate-900 mb-1">Stay Updated</h3>
-                    <p class="text-xs text-slate-600 mb-4">Receive reminders before each talk.</p>
-                    <form onsubmit="handleSubscribe(event)" class="flex gap-2">
-                        <input type="email" id="subscriber-email" required placeholder="student@university.edu" class="flex-1 px-3 py-2 text-xs border border-slate-300 rounded-lg">
-                        <button type="submit" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold">Join List</button>
+                <div class="bg-slate-100 border border-slate-200 p-5 rounded-sm">
+                    <h3 class="font-bold text-lg mb-2">Mailing List</h3>
+                    <p class="text-sm text-slate-600 mb-4">Subscribe to receive abstracts and room updates.</p>
+                    <form onsubmit="handleSubscribe(event)" class="flex flex-col gap-2 font-sans">
+                        <input type="email" id="subscriber-email" required placeholder="student@university.edu" class="px-3 py-2 text-sm border border-slate-300 rounded-sm">
+                        <button type="submit" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-sm text-sm font-semibold w-fit">Subscribe</button>
                     </form>
-                    <p id="subscribe-feedback" class="text-xs hidden text-emerald-700 mt-1"></p>
+                    <p id="subscribe-feedback" class="text-sm hidden text-green-700 mt-2 font-sans"></p>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="border-t border-slate-300 mt-12 py-8 text-center text-sm font-sans text-slate-500">
+        &copy; 2026 [University/Department]. Typeset with KaTeX.
+    </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -151,7 +142,7 @@
         });
         function handleSubscribe(e) {
             e.preventDefault();
-            document.getElementById('subscribe-feedback').textContent = "Subscribed!";
+            document.getElementById('subscribe-feedback').textContent = "Subscription recorded successfully.";
             document.getElementById('subscribe-feedback').classList.remove('hidden');
         }
     </script>
